@@ -1,31 +1,34 @@
 const Sequelize = require('sequelize');
 const database = require('../db');
-const { UPDATE } = require('sequelize/lib/query-types');
-const { IGNORE } = require('sequelize/lib/index-hints');
 
-const Reserva = database.define('reservas', {
-    idReserv: {
+const Usuario = database.define('usuarios', {
+    idUser: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
-    nome: {
+    name: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    data: {
-        type: Sequelize.DATE,
+    telefone: {
+        type: Sequelize.INTEGER,
         allowNull: false
     },
-    hora: {
-        type: Sequelize.TIME,
+    email: {
+        type: Sequelize.STRING,
         allowNull: false
-    }
+    },
+    senha: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+
 });
 
 (async () => {
-    await Reserva.sync();
+    await Usuario.sync();
 })();
 
-module.exports = Reserva;
+module.exports = Usuario;
