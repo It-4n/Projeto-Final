@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize');
 const database = require('../db');
 const sequelize = require('../db');
+const { UPDATE } = require('sequelize/lib/query-types');
+const { IGNORE } = require('sequelize/lib/index-hints');
 
 const Reserva = database.define('reservas', {
     id: {

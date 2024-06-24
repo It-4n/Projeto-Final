@@ -1,5 +1,5 @@
-<form action="/editar/:id" method="POST">
-    <input type="hidden" name="id" value={{id}}>
+<form action="/editar/{{id}}" method="post">
+    <input type="hidden" name="id" value="{{id}}">
     <input type="text" name="nome">
     <input type="date" name="data">
     <input type="time" name="hora">

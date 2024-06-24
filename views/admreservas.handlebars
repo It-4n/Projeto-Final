@@ -1,13 +1,18 @@
 <h1>teste4</h1>
 
-<ul>
-    {{#each reservas}}
-    <li>
-        <p>Nome: {{nome}}</p>
-        <p>Data: {{data}}</p>
-        <p>Horário: {{hora}}</p>
-    </li>
-    <a href="/editar/{{id}}">editar</a>
-    <a href="/admreservas/{{id}}" onclick="return confirm">deletar</a>
-    {{/each}}
-</ul>
+<table>
+    <tbody>
+        {{#each reservas}}
+        <tr>
+            <td>
+                <p>Nome: {{nome}}</p>
+                <p>Data: {{data}}</p>
+                <p>Horário: {{hora}}</p>
+
+                <a href="/editar/{{id}}">Editar</a>
+                <a href="/admreservas/{{id}}" onclick="return confirm('Deseja APAGAR esta reserva?')">Deletar</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
