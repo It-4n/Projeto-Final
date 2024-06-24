@@ -1,0 +1,13 @@
+<h1>teste4</h1>
+
+<ul>
+    {{#each reservas}}
+    <li>
+        <p>Nome: {{nome}}</p>
+        <p>Data: {{data}}</p>
+        <p>Horário: {{hora}}</p>
+    </li>
+    <a href="/editar/{{id}}">editar</a>
+    <a href="/admreservas/{{id}}" onclick="return confirm">deletar</a>
+    {{/each}}
+</ul>
