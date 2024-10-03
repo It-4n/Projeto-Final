@@ -143,6 +143,6 @@ app.get('/registrar', (req, res) => {
 //     });
 // });
 
-app.listen(4444, () => {
-    console.log("Servidor rodando em http://localhost:4444");
+app.listen(5555, () => {
+    console.log("Servidor rodando em http://localhost:5555");
 });
